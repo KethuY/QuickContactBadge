@@ -2,42 +2,65 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-  >
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/li"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
-        android:text="Email Contact" />
+        android:orientation="horizontal">
 
-    <QuickContactBadge
-        android:id="@+id/quickContactBadge1"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:text="Email Contact" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        <QuickContactBadge
+            android:id="@+id/quickContactBadge1"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Phone Contact" />
+
+        <QuickContactBadge
+            android:id="@+id/quickContactBadge2"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Phone Contact" />
+        android:layout_below="@+id/li"
+        android:id="@+id/li1"
+        android:orientation="horizontal">
 
-    <QuickContactBadge
-        android:id="@+id/quickContactBadge2"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/li1" />
+
 
 </RelativeLayout>
